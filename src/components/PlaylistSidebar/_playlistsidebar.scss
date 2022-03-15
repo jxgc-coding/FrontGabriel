@@ -1,0 +1,420 @@
+.img-banner-container {
+  margin-bottom: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#draggable-list-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+#draggable-list-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+
+  @media screen and (max-width: 768px) {
+    width: 6px;
+  }
+}
+
+#draggable-list-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(139, 139, 139);
+}
+
+.related-videos-container {
+  height: inherit;
+  overflow-y: auto;
+
+  .related-video-card-container {
+    position: relative;
+    cursor: pointer;
+
+    .litem-more-vert-icon {
+      position: absolute;
+      z-index: 1;
+      bottom: 45px;
+      right: 10px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      border-radius: 3px;
+      color: #8c8c8c;
+
+      opacity: 0;
+      -webkit-transition: all ease-in-out 0.236s;
+      -moz-transition: all ease-in-out 0.236s;
+      transition: all ease-in-out 0.236s;
+
+      .MuiIconButton-root {
+        padding: 6px;
+      }
+
+      svg {
+        font-size: 24px;
+      }
+    }
+
+    .litem-add-playlist-icon {
+      position: absolute;
+      z-index: 1;
+      top: 4px;
+      right: 5px;
+      background-color: #000000a4;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      color: white;
+      cursor: pointer;
+
+      opacity: 0;
+      -webkit-transition: all ease-in-out 0.236s;
+      -moz-transition: all ease-in-out 0.236s;
+      transition: all ease-in-out 0.236s;
+
+      svg {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: #151515;
+      }
+    }
+
+    &:hover .litem-add-playlist-icon {
+      opacity: 1;
+    }
+
+    &:hover .litem-more-vert-icon {
+      opacity: 1;
+    }
+  }
+
+  .related-video-card.playing {
+    background-color: #e0e0e0;
+
+    .content-overlay {
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 100%;
+      bottom: 0;
+      color: white;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+
+      top: 40%;
+      left: 50%;
+      opacity: 1;
+
+      @media screen and (max-width: 1200px) {
+        top: 32%;
+      }
+
+      @media screen and (max-width: 959px) {
+        top: 52.5%;
+      }
+
+      @media screen and (max-width: 768px) {
+        top: 45%;
+      }
+
+      @media screen and (max-width: 600px) {
+        top: 38%;
+      }
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      padding-bottom: 56.25%;
+      height: 0;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 1 !important;
+      -webkit-transition: all ease-in-out 0.236s;
+      -moz-transition: all ease-in-out 0.236s;
+      transition: all ease-in-out 0.236s;
+    }
+  }
+
+  .related-video-card {
+    border-radius: 0;
+    display: flex;
+    margin-bottom: 8px;
+    box-shadow: none;
+    padding: 8px 8px 8px 35px;
+
+    .current-playing-icon {
+      position: absolute;
+      left: 0;
+      top: 34%;
+      padding: 4px;
+      color: #494949;
+    }
+
+    .number-index-playlist {
+      position: absolute;
+      left: 0.5%;
+      top: 30%;
+      padding: 10px;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 320px) {
+        top: 26%;
+      }
+    }
+
+    .img-cont {
+      min-width: 150px;
+      flex: 1;
+      position: relative;
+
+      .related-video-media {
+        padding-bottom: 56.25%;
+      }
+
+      @media screen and (max-width: 1200px) {
+        min-width: 115px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #e0e0e0;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+
+    // &:hover .content-overlay {
+    //     top: 50%;
+    //     left: 50%;
+    //     opacity: 1;
+    // }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      padding-bottom: 56.25%;
+      height: 0;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: all ease-in-out 0.236s;
+      -moz-transition: all ease-in-out 0.236s;
+      transition: all ease-in-out 0.236s;
+    }
+
+    &:hover .content-overlay {
+      top: 40%;
+      left: 50%;
+      opacity: 1;
+
+      @media screen and (max-width: 1200px) {
+        top: 32%;
+      }
+
+      @media screen and (max-width: 600px) {
+        top: 38%;
+      }
+    }
+
+    .content-overlay {
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 100%;
+      top: 60%;
+      bottom: 0;
+      left: 50%;
+      opacity: 0;
+      color: white;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .play-circle-icon {
+      color: rgba(255, 255, 255, 0.8);
+      width: 3rem;
+      height: 3rem;
+      transition: all ease-in-out 0.236s;
+
+      @media screen and (max-width: 600px) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .play-circle-icon:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 8px;
+    }
+  }
+
+  .related-video-details {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    width: 100%;
+  }
+
+  .related-video-content {
+    flex: 1 0 auto;
+    padding: 0 0 0 16px;
+    max-width: 280px;
+
+    .related-video-title {
+      font-size: 1rem;
+      font-weight: 500;
+      padding-right: 55px;
+      display: -webkit-box;
+      max-height: 3.2rem;
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 2;
+      line-height: 1.4rem;
+
+      @media screen and (min-width: 1920px) {
+        padding-right: 0;
+      }
+
+      @media screen and (max-width: 1200px) {
+        padding-right: 95px;
+        font-size: 0.9rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        font-size: 0.85rem;
+        padding-right: 115px;
+      }
+
+      @media screen and (max-width: 959px) {
+        font-size: 1.5rem;
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 0.9rem;
+        margin-bottom: 0px;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .related-video-description {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      margin-top: 3px;
+      padding-right: 55px;
+      display: -webkit-box;
+      max-height: 3.2rem;
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 1;
+      // line-height: 1.4rem;
+
+      @media screen and (min-width: 1920px) {
+        padding-right: 0;
+        -webkit-line-clamp: 3;
+      }
+
+      @media screen and (max-width: 1200px) {
+        padding-right: 95px;
+        font-size: 0.8rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding-right: 115px;
+      }
+
+      @media screen and (max-width: 959px) {
+        padding-right: 0;
+        font-size: 1rem;
+        -webkit-line-clamp: 5;
+        max-height: 6rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-right: 0;
+        font-size: 1rem;
+        -webkit-line-clamp: 3;
+        max-height: 6rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        padding-right: 0;
+        font-size: 0.85rem;
+        -webkit-line-clamp: 1;
+        max-height: 2rem;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 0.7rem;
+      }
+    }
+
+    @media screen and (max-width: 959px) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 0 0 0 10px;
+      max-width: 240px;
+    }
+
+    @media screen and (max-width: 400px) {
+      max-width: 205px;
+    }
+
+    @media screen and (max-width: 320px) {
+      max-width: 150px;
+    }
+  }
+}

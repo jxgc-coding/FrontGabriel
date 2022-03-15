@@ -1,0 +1,68 @@
+.streaming-container {
+  color: rgb(66, 66, 66);
+
+  .streming-title {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    grid-template-columns: minmax(5%, auto) auto minmax(20px, 1fr);
+    grid-gap: 20px;
+
+    @media screen and (max-width: 850px) {
+      grid-template-columns: minmax(18%, auto) auto minmax(20px, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: minmax(0%, auto) auto minmax(20px, 1fr);
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      font-size: 4rem;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      svg {
+        margin-right: 10px;
+        color: #e80000;
+        font-size: 3.5rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        justify-content: center;
+        font-size: 2rem;
+
+        svg {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .streming-title:before,
+  .streming-title:after {
+    content: '';
+    border-top: 2px solid #272a52;
+
+    @media screen and (max-width: 414px) {
+      border-top: none;
+    }
+  }
+
+  .streaming-player-container {
+    padding: 25px 0 35px;
+
+    @media screen and (max-width: 600px) {
+      padding: 0 0 25px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: 35px;
+  }
+}

@@ -1,0 +1,19 @@
+.paginate-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiFlatPagination-textSecondary {
+  color: white;
+  background-color: #488637;
+}
+
+.MuiFlatPagination-textSecondary:hover {
+  background-color: #305825;
+}
+
+.MuiFlatPagination-textPrimary {
+  color: #919191;
+}

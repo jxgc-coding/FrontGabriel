@@ -1,0 +1,12 @@
+.content-detail-container {
+  margin: 64px 0 0;
+}
+
+.content-detail-container-cont {
+  padding-top: 24px;
+  margin: 0 20px;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 10px;
+  }
+}

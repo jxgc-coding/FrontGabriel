@@ -1,0 +1,102 @@
+.playlist-order-container {
+  margin: 64px 0 0;
+}
+
+// .playlist-order-container-no-playlist {
+//   padding: 64px 0px;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   .playlist-order-container-cont {
+//     width: 100%;
+//   }
+// }
+
+.playlist-order-container-cont {
+  padding: 24px 20px;
+
+  #list-videos {
+    @media screen and (max-width: 600px) {
+      padding: 10px 17px 0;
+    }
+  }
+
+  .order-playlist-title {
+    background-color: #fff;
+    border-radius: 0px !important;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .no-playlist-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+
+    .snackbar {
+      width: 100%;
+      background-color: #bd2424;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+
+      .snackbar-message {
+        display: flex;
+        align-items: center;
+
+        svg {
+          font-size: 20px;
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    .snackbar-go-back-button-link {
+      width: 60%;
+      text-decoration: none;
+
+      .snackbar-go-back-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #464646;
+
+        svg {
+          font-size: 20px;
+        }
+
+        span {
+          font-weight: bolder;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        width: inherit;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
+}

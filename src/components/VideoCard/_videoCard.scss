@@ -1,0 +1,298 @@
+.litem-watch-later-added {
+  margin-left: 10px;
+  svg {
+    color: #272a52;
+    font-weight: bold;
+  }
+}
+
+.litem-favorites-added {
+  margin-left: 10px;
+  svg {
+    color: #272a52;
+    font-weight: bold;
+  }
+
+  &:hover {
+    background-color: darken(#272a52, 10%);
+  }
+}
+
+.video-card-container {
+  position: relative;
+
+  .litem-more-vert-icon {
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+    opacity: 0;
+    -webkit-transition: all ease-in-out 0.236s;
+    -moz-transition: all ease-in-out 0.236s;
+    transition: all ease-in-out 0.236s;
+
+    .MuiIconButton-root {
+      padding: 6px;
+    }
+
+    svg {
+      color: #8c8c8c;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      bottom: 50px;
+    }
+  }
+
+  .litem-more-vert-icon-mobile {
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+    .MuiIconButton-root {
+      padding: 6px;
+    }
+
+    svg {
+      color: #8c8c8c;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 320px) {
+      bottom: 60px;
+    }
+  }
+
+  .litem-add-playlist-icon {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 5px;
+    background-color: #000000a4;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+
+    opacity: 0;
+    -webkit-transition: all ease-in-out 0.236s;
+    -moz-transition: all ease-in-out 0.236s;
+    transition: all ease-in-out 0.236s;
+
+    svg {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: #151515;
+    }
+  }
+
+  .litem-add-playlist-icon-mobile {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 5px;
+    background-color: #000000a4;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+
+    svg {
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+
+  .litem-added {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 5px;
+    background-color: #272a52;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+
+    svg {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: darken(#272a52, 10%);
+    }
+  }
+
+  &:hover .litem-add-playlist-icon {
+    opacity: 1;
+  }
+
+  &:hover .litem-more-vert-icon {
+    opacity: 1;
+  }
+
+  .card {
+    border-radius: 0px !important;
+    margin-bottom: 25px;
+    cursor: pointer;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    min-height: 270px;
+
+    .img-cont {
+      position: relative;
+      padding-bottom: 56.2%;
+    }
+
+    .card-image {
+      position: absolute;
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: all ease-in-out 0.236s;
+      -moz-transition: all ease-in-out 0.236s;
+      transition: all ease-in-out 0.236s;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+
+    &:hover .content-overlay {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+
+    .content-overlay {
+      position: absolute;
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      width: 100%;
+      top: 80%;
+      left: 50%;
+      opacity: 0;
+      color: white;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .card-content {
+      padding: 0px 15px 10px 15px !important;
+      width: inherit;
+    }
+
+    .oprtions {
+      padding: 15px 0 0;
+    }
+
+    .divider {
+      margin-top: 10px;
+    }
+
+    .video-title {
+      color: #272a52;
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      height: 45px;
+      padding-right: 25px;
+      display: -webkit-box;
+      max-height: 3.2rem;
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 2;
+      font-weight: 500;
+      line-height: 1.4rem;
+    }
+
+    .video-description {
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .play-circle-icon {
+      color: rgba(255, 255, 255, 0.8);
+      width: 4rem;
+      height: 4rem;
+      transition: all ease-in-out 0.236s;
+    }
+
+    .play-circle-icon:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    /* md */
+    @media (max-width: 1063px) {
+      .itemDescription {
+        max-height: 100px;
+      }
+    }
+  }
+
+  .menu-item {
+    min-width: 40px !important;
+  }
+
+  // .star-favorite {
+  //   font-size: 30px;
+  // }
+
+  .text-poover-menu {
+    font-size: 0.9rem;
+  }
+}

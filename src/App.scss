@@ -1,0 +1,28 @@
+.goToTop {
+  position: fixed;
+  right: -100px;
+  bottom: 15px;
+  transition: all 0.472s;
+  cursor: pointer;
+  color: white;
+  background-color: #25252591;
+  padding: 0px;
+  font-size: 0;
+  z-index: 999999999;
+
+  svg {
+    font-size: 38px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #252525;
+  }
+}
+
+.goToTopTransition {
+  right: 10px;
+}

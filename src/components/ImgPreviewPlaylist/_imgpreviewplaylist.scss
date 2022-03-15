@@ -1,0 +1,94 @@
+.video-detail-container {
+  margin: 64px 0 0;
+}
+
+.playlist-preview-img-cont {
+  position: relative;
+  padding-bottom: 56.2%;
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+
+  &:hover .content-overlay {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .card-image {
+    position: absolute;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+  }
+
+  .skull-card-image {
+    position: absolute;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(150, 150, 150);
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all ease-in-out 0.236s;
+    -moz-transition: all ease-in-out 0.236s;
+    transition: all ease-in-out 0.236s;
+  }
+
+  .play-overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dedede;
+    background-color: #000000bf;
+    padding: 10px 0;
+    font-weight: 600;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .content-overlay {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 80%;
+    left: 50%;
+    opacity: 0;
+    color: white;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .play-circle-icon {
+    color: rgba(255, 255, 255, 0.8);
+    width: 4rem;
+    height: 4rem;
+    transition: all ease-in-out 0.236s;
+  }
+
+  .play-circle-icon:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}

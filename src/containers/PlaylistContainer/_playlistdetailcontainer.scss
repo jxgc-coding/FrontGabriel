@@ -1,0 +1,51 @@
+.playlist-detail-container {
+  margin: 64px 0 0;
+}
+
+.playlist-detail-container-cont {
+  padding-top: 24px;
+  margin: 0 20px;
+
+  #related-videos {
+    @media screen and (max-width: 600px) {
+      padding: 10px 17px 0;
+    }
+  }
+
+  .sidebar-playlist-title {
+    background-color: #fff;
+    border-radius: 0px !important;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    margin-bottom: 5px;
+    padding: 5px 10px;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  #related-videos {
+    @media screen and (max-width: 959px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .sidebar-playlist-content {
+    height: inherit;
+    background-color: #fff;
+    border-radius: 0px !important;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+
+    @media screen and (max-width: 600px) {
+      max-height: 270px;
+      overflow-y: auto;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+    margin: 0;
+  }
+}

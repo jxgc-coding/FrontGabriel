@@ -1,0 +1,13 @@
+.video-detail-container {
+  margin: 64px 0 0;
+}
+
+.video-detail-container-cont {
+  padding-top: 24px;
+  margin: 0 20px;
+
+  @media screen and (max-width: 600px) {
+    margin: 0;
+    padding: 0;
+  }
+}

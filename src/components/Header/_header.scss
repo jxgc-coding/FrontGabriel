@@ -1,0 +1,62 @@
+.header-cont {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #f1f1f1;
+
+  .image-container {
+    // max-height: 55vh;
+    // min-height: 24.3vw;
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+
+    .overlay {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      // max-height: 55vh;
+    }
+
+    // @media screen and (max-width: 1200px) {
+    //     min-height: 22.5vw;
+    // }
+  }
+
+  .channel-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    h1 {
+      font-size: 3.8rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .xs-title {
+    h1 {
+      color: #272a52;
+      margin-top: 0px;
+      font-size: 2rem;
+    }
+  }
+}
